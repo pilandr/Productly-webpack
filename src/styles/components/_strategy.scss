@@ -1,0 +1,22 @@
+.strategy {
+  padding: 0 0 0 4px;
+  margin: 0 0 119px;
+
+  &__title {
+    @include title-section-small-text;
+
+    & {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__description {
+    @include text-main;
+
+    margin-bottom: 53px;
+  }
+
+  @include tablets {
+    margin: 0 0 70px;
+  }
+}

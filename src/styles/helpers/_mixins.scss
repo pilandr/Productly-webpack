@@ -1,0 +1,167 @@
+@mixin button-main {
+  display: block;
+  color: $color-brand;
+  font-size: $size-text-main;
+  font-weight: 600;
+  padding: 11px 23px;
+  background-color: $color-background-button-main;
+  border-radius: 4px;
+}
+
+@mixin button-text {
+  @include button-main;
+
+  color: $color-background-button-main;
+  background: none;
+}
+
+@mixin title-text {
+  font-size: $size-text-h1;
+  font-weight: 700;
+  line-height: 54px;
+  color: $color-text-secondary;
+
+  @include notebooks {
+    font-size: $size-text-h2;
+  }
+  
+  @include tablets{
+    font-size: $size-text-h1-tablets;
+  }
+
+  @include phones{
+    font-size: $size-text-h1-phones;
+  }
+}
+
+@mixin subtitle-text {
+  font-size: $size-text-subtitle;
+  font-weight: 400;
+  line-height: 28px;
+  color: $color-text-main;
+}
+
+@mixin text-main {
+  font-size: $size-text-main;
+  font-weight: 500;
+  line-height: 26px;
+  color: $color-text-main;
+}
+
+@mixin title-section-text {
+  font-size: $size-text-h2;
+  font-weight: 700;
+  line-height: 54px;
+  color: $color-text-secondary;
+
+  @include tablets {
+    font-size: $size-text-h2-tablets;
+    line-height: 36px;
+  }
+
+  @include phones {
+    font-size: $size-text-h2-phones;
+  }
+}
+
+@mixin title-section-small-text {
+  font-size: $size-text-h3;
+  font-weight: 700;
+  line-height: 51px;
+  color: $color-text-secondary;
+
+  @include phones {
+    font-size: $size-text-h1-phones;
+  }
+}
+
+@mixin title-list-large-text {
+  font-size: $size-text-h5;
+  font-weight: 600;
+  line-height: 33px;
+  color: $color-text-secondary;
+
+  @include phones {
+    font-size: $size-text-subtitle;
+  }
+}
+
+@mixin title-list-small-text {
+  font-size: $size-text-main;
+  font-weight: 700;
+  line-height: 26px;
+  color: $color-text-secondary;
+}
+
+@mixin title-slide-text {
+  font-size: $size-text-h4;
+  font-weight: 700;
+  line-height: 34px;
+  color: $color-text-secondary;
+
+  @include tablets {
+    font-size: $size-text-h5;
+  }
+
+  @include phones {
+    font-size: $size-text-title-footer;
+  }
+}
+
+@mixin title-column-text {
+  font-family: $font-secondary;
+  font-weight: 900;
+  font-size: $size-text-title-footer;
+  line-height: 30px;
+  color: $color-text-secondary;
+
+  @include tablets {
+    font-size: $size-text-main;
+    line-height: 22px;
+  }
+}
+
+@mixin input-main {
+  display: block;
+  padding: 9px 13px;
+  border-radius: 4px;
+  border: 1px solid $color-border-button-main;
+  font-size: $size-text-main;
+  font-family: $font-secondary;
+  font-weight: 900;
+  line-height: 28px;
+}
+
+@mixin placeholder-text {
+  font-family: $font-secondary;
+  font-weight: 900;
+  font-size: $size-text-main;
+  line-height: 26px;
+  color: $color-border-button-main;
+
+  @include tablets {
+    font-size: $size-text-secondary;
+  }
+
+  @include phones {
+    font-size: $size-text-main;
+  }
+}
+
+@mixin notebooks {
+  @media screen and (max-width: $notebooks) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}

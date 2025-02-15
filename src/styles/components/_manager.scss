@@ -1,0 +1,98 @@
+.manager {
+  display: flex;
+  margin-bottom: 33px;
+
+  @include phones {
+    flex-direction: column;
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+  }
+
+  &__column-image {
+    position: relative;
+    flex: 1;
+    min-height: 630px;
+
+    @include phones {
+      max-width: 50%;
+      margin: 0 auto 10px;
+      min-height: auto;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 38px;
+    left: 1px;
+
+    @include notebooks {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include phones {
+      position: static;
+      transform: translate(0, 0);
+    }
+  }
+
+  &__column {
+    max-width: 500px;
+    margin-right: 10px;
+    padding: 87px 0 0 26px;
+
+    @include phones {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__title_size_small {
+    @include text-main;
+
+    line-height: 24px;
+    margin-bottom: 3px;
+  }
+
+  &__title {
+    @include title-section-text;
+
+    & {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__description {
+    @include text-main;
+
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    padding: 0 25px 0 65px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: url("@/images/check-icon.svg");
+      position: absolute;
+      top: 7px;
+      left: 0;
+    }
+
+    &-text {
+      @include text-main;
+    }
+  }
+}

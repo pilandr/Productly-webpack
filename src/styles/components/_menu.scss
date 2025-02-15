@@ -1,0 +1,34 @@
+.menu {
+  font-size: $size-text-secondary;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 26px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include tablets {
+      margin-right: 15px;
+    }
+  }
+
+  &_vertical &__list {
+    flex-direction: column;
+  }
+
+  &_vertical &__item {
+    margin: 0 0 20px;
+  }
+
+  &_vertical &__link {
+    @include title-section-text;
+  }
+}

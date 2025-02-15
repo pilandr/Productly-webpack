@@ -1,0 +1,119 @@
+.profession {
+  display: flex;
+  margin-bottom: 63px;
+
+  @include phones {
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+
+  &__column {
+    max-width: 490px;
+    margin-right: 10px;
+
+    &-design {
+      padding: 40px 0 0 2px;
+    }
+
+    &-marketer {
+      padding: 40px 0 0 4px;
+    }
+
+    @include phones {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      order: 2;
+    }
+  }
+
+  &__title_size_small {
+    @include text-main;
+
+    line-height: 24px;
+    margin-bottom: 3px;
+  }
+
+  &__title {
+    @include title-section-text;
+
+    & {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__description {
+    @include text-main;
+
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      @include title-list-small-text;
+
+      margin-bottom: 12px;
+    }
+
+    &-description {
+      @include text-main;
+    }
+  }
+
+  &__column-image {
+    position: relative;
+    flex: 1;
+
+    &-design {
+      min-height: 587px;
+    }
+
+    &-marketer {
+      min-height: 630px;
+    }
+
+    @include phones {
+      max-width: 50%;
+      margin: 0 auto 10px;
+      min-height: auto;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-design {
+      top: 13px;
+      left: 92px;
+    }
+
+    &-marketer {
+      top: 0;
+      left: 72px;
+    }
+
+    @include notebooks {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include phones {
+      position: static;
+      transform: translate(0, 0);
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.slider {
+  position: relative;
+
+  &__hidden {
+    max-width: 98%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    margin-bottom: 53px;
+    position: relative;
+  }
+
+  &__item {
+    margin-right: 25px;
+    flex: 0 0 auto;
+    max-width: 348px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px 0 0;
+  }
+
+  &__prev,
+  &__next {
+    display: block;
+    width: 27px;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.6;
+    top: 40%;
+    font-size: 60px;
+    line-height: 60px;
+    transition: 0.2s ease;
+  }
+
+  &__prev {
+    left: -5px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__next {
+    right: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

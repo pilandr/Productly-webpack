@@ -1,0 +1,15 @@
+.button {
+  @include button-main;
+
+  &_light {
+    @include button-main;
+
+    background: none;
+    color: $color-text-button-main;
+    border: 1px solid $color-border-button-main;
+
+    @include phones {
+      margin-bottom: 20px;
+    }
+  }
+}

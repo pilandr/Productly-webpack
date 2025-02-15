@@ -1,0 +1,51 @@
+.header {
+  min-height: 115px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__column {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-menu {
+      margin-right: 54px;
+
+      @include tablets {
+        margin-right: 15px;
+      }
+
+      @include phones {
+        display: none;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 7px;
+
+    &-column {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include tablets {
+        margin-right: 5px;
+      }
+    }
+
+    @include tablets {
+      padding-right: 0;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}

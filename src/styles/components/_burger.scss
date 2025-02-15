@@ -1,0 +1,94 @@
+.burger {
+  display: none;
+
+  &__button {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+
+  &__line1,
+  &__line2,
+  &__line3 {
+    position: absolute;
+    width: 26px;
+    height: 4px;
+    background-color: $color-text-secondary;
+    transition: 0.2s;
+  }
+
+  &__line1 {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__line2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__line3 {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &_active &__line1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &_active &__line2 {
+    background-color: transparent;
+  }
+
+  &_active &__line3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &__menu {
+    display: none;
+    min-width: 300px;
+    height: 100%;
+    background-color: $color-background-menu-burger;
+  }
+
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+    background-color: $color-background-overlay-50;
+  }
+
+  &_active &__overlay {
+    display: block;
+  }
+
+  &_active &__menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    right: 0;
+    z-index: 10;
+    padding: 0 10px;
+  }
+
+  @include phones {
+    display: block;
+  }
+}

@@ -1,0 +1,7 @@
+.logo {
+  display: block;
+
+  @include tablets {
+    max-width: 170px;
+  }
+}
