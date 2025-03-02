@@ -1,5 +1,5 @@
-import Slider from "./slider.js";
-import Burger from "./burger";
+import Slider from "@/scripts/slider";
+import Burger from "@/scripts/burger";
 
 Slider.init();
 Burger.init();
